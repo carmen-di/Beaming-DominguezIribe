@@ -1,0 +1,28 @@
+.navbar{
+  width: 100%;
+  margin: auto;
+  padding: 15px 0;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  background-color: #635858;
+}
+
+.navbar ul li{
+  list-style: none;
+  display: inline-block;
+  margin: 0 30px;
+}
+
+.navbar ul li a{
+  text-decoration: none;
+  color: white;
+  font-size: 1.1rem;
+}
+
+.navbar-brand{
+  font-size: 1.7rem;
+  color: white;
+  text-decoration: none;
+  padding-left: 50px;
+}

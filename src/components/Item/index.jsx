@@ -4,10 +4,11 @@ import Card from 'react-bootstrap/Card';
 const Item = ({productMostrar}) => {
   return (
     <Card style={{ width: '18rem' }}>
-      <Card.Img variant="top" src="https://d3ugyf2ht6aenh.cloudfront.net/stores/568/691/products/chloe-oro-21-c472d60dfaff05b6ad16487481226842-640-0.jpg" />
+      <Card.Img variant="top" src= {productMostrar.image} width= {250}/>
       <Card.Body>
-        <Card.Title>{productMostrar.nombre}</Card.Title>
-        <Card.Text>{productMostrar.descripcion}</Card.Text>
+        <Card.Title>{productMostrar.title}</Card.Title>
+        <Card.Text>${productMostrar.price}</Card.Text>
+        <Card.Text>{productMostrar.description}</Card.Text>
       </Card.Body>
     </Card>
   )

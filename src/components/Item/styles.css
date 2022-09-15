@@ -1,0 +1,8 @@
+.description{
+    height: 150px;
+    overflow: hidden ;
+}
+
+.imagen{
+    object-fit: contain;
+}

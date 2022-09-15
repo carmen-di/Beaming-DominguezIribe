@@ -1,14 +1,21 @@
 import React from 'react'
 import Card from 'react-bootstrap/Card';
+import {useNavigate} from 'react-router-dom';
+import './styles.css'
 
 const Item = ({productMostrar}) => {
-  return (
-    <Card style={{ width: '18rem' }}>
-      <Card.Img variant="top" src= {productMostrar.image} width= {250}/>
+  const navigate = useNavigate();
+  const handleNavigate = () => {
+    navigate(`/detail/${productMostrar.id}`)
+  }
+
+  return ( 
+    <Card style={{ width: '18rem' }} onClick={handleNavigate}>
+      <Card.Img className='imagen' variant="top" src= {productMostrar.image} width= {250} height={300}/>
       <Card.Body>
         <Card.Title>{productMostrar.title}</Card.Title>
         <Card.Text>${productMostrar.price}</Card.Text>
-        <Card.Text>{productMostrar.description}</Card.Text>
+        <Card.Text className='description'>{productMostrar.description}</Card.Text>
       </Card.Body>
     </Card>
   )

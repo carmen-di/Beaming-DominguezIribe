@@ -4,8 +4,11 @@ import {useParams} from 'react-router-dom'
 import ItemList from '../../components/ItemList'
 // import {products} from '../../data/products'
 import './styles.css'
+// import { db } from '../../firebase/config'
 
 const ItemListContainer = ({greeting}) => {
+
+  // console.log(db);
 
   const [productos, setProductos] = useState([])
 

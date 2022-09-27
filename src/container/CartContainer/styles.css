@@ -1,0 +1,9 @@
+.btnVolver{
+    position: absolute;
+    font-weight: 700;
+    left: 44%;
+}
+
+.btnVolver :hover{
+    color: #635858;
+}

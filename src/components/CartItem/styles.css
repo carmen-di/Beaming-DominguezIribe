@@ -1,0 +1,29 @@
+.contenedorCart{
+    margin-top: 3rem;
+    display: flex;  
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+}
+
+.fila{
+    background-color: #635858;
+    height: 45px;
+    color: #fff;
+}
+.fila th{
+    padding: 12px;    
+}
+.filaItem img{
+    padding-left: 2%;
+    max-width: 40px;
+}
+table{
+    width: 80%;
+}
+
+.tacho{
+    width: 45%;
+    border: #fff;
+    background-color: #fff;
+}

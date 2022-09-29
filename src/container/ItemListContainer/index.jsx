@@ -1,14 +1,13 @@
 import React, {useEffect, useState} from 'react'
 import {useParams} from 'react-router-dom'
-// import ItemCount from '../../components/ItemCount'
 import ItemList from '../../components/ItemList'
-// import {products} from '../../data/products'
+import {db} from '../../firebase/config'
+import {collection, query, where, getDocs} from "firebase/firestore";
 import './styles.css'
-// import { db } from '../../firebase/config'
 
 const ItemListContainer = ({greeting}) => {
 
-  // console.log(db);
+  console.log(db);
 
   const [productos, setProductos] = useState([])
 
@@ -20,35 +19,35 @@ const ItemListContainer = ({greeting}) => {
     
     (async ()=> {
         try {
-          if (categoryId){
-            const response = await fetch("https://fakestoreapi.com/products/category/" + categoryId);
-            const productos = await response.json();
-            setProductos(productos);
-          }
-          else {
-            const response = await fetch("https://fakestoreapi.com/products");
-            const productos = await response.json();
-            setProductos(productos);
-          }
+          const q = categoryId 
+            ?query(
+              collection(db, "products"), 
+              where("category", "==", categoryId)
+              )
+            :query(collection(db, "products"));
+
+          const querySnapshot = await getDocs(q);
+          const productosFirebase = [];
+
+          querySnapshot.forEach((doc) => {
+            productosFirebase.push({ id: doc.id, ...doc.data() })
+          });
+
+          setProductos(productosFirebase)
+
       } catch (error) {
           console.log(error);
       }
     })()
   }, [categoryId])
 
-  console.log(productos)
-
-  // const agregarAlCarrito = (cantidad) => {
-  //   console.log(cantidad);
-  //   console.log(`Se agregó la cantidad ${cantidad} al carrito!`);
-  // }
   return (
-    <><div>
-      <h2>{greeting}</h2>
-      {/* <ItemCount initial={1} stock={5} onAdd={agregarAlCarrito}/> */}
-      </div><div className='item-list-container'>
+    <>
+      <div><h2>{greeting}</h2></div>
+      <div className='item-list-container'>
         <ItemList products= {productos}/>
-      </div></>
+      </div>
+    </>
   )
 }
 

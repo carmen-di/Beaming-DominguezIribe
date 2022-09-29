@@ -11,10 +11,10 @@ const NavBar = () => {
       <div>
         <ul>
           <li><Link to= "/">Inicio</Link></li>
-          <li><Link to="/category/electronics">Electronics</Link></li>
-          <li><Link to="/category/jewelery">Jewelery</Link></li>
-          <li><Link to="/category/men's clothing">Men's clothing</Link></li>
-          <li><Link to="/category/women's clothing">Women's clothing</Link></li>
+          <li><Link to="/category/aros">Aros</Link></li>
+          <li><Link to="/category/collares">Collares</Link></li>
+          <li><Link to="/category/anillos">Anillos</Link></li>
+          <li><Link to="/category/pulseras">Pulseras</Link></li>
         </ul>
       </div>
       <div>

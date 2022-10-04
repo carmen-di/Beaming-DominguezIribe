@@ -44,7 +44,7 @@ const ItemDetail = ({product}) => {
             <p>{product.description}</p>
             <p>${product.price}</p>
             {qty ? <Button variant="outline-dark" onClick={handleFinish}>Finalizar Compra</Button>
-              : <ItemCount stock={5} initial={1} onAdd={addCart}/>}
+              : <ItemCount stock={product.stock} initial={1} onAdd={addCart}/>}
           </div>
         </div>
     </div>

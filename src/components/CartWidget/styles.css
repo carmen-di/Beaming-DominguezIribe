@@ -9,8 +9,9 @@
     color: #d6c9c9;
 }
 
-.carrito span{
+.carrito p{
     position: relative;
+    left: 40px;
     bottom: 12px;
     width: 10px;
     height: 10px;

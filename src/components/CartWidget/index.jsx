@@ -16,10 +16,14 @@ const CartWidget = () => {
 
   return (
     <div className='carrito'>
-      <HiShoppingCart onClick={redireccion}/>
-      <span className= {cart.length ? '' : 'off'}>                 
-        {cart.length}                
-      </span>
+      {cart.length ? (
+        <>
+          <p>{cart.length}</p>
+          <HiShoppingCart onClick={redireccion}/>
+        </>
+      ) : (
+        ''
+      )}
     </div>
   )
 }

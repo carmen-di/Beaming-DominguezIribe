@@ -37,3 +37,23 @@ table{
 .btnVolver :hover{
     color: #635858;
 }
+
+.resumen {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    margin: 25px;
+    padding: 20px;
+    align-items: center;
+    background-color: #f0eded;
+    border-radius: 5%;
+}
+
+.btnConfirm{
+    margin-top: 10px;
+    font-weight: 700;
+}
+
+.btnConfirm :hover{
+    color: #635858;
+}

@@ -12,13 +12,13 @@ const CartWidget = () => {
     navigate('/cart')
   }
   
-  const {cart} = useContext(Shop)
+  const {cart, totalProducts} = useContext(Shop)
 
   return (
     <div className='carrito'>
       {cart.length ? (
         <>
-          <p>{cart.length}</p>
+          <p>{totalProducts}</p>
           <HiShoppingCart onClick={redireccion}/>
         </>
       ) : (

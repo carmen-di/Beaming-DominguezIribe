@@ -1,0 +1,8 @@
+.loader {
+    color: #635858;
+    height: 28vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}

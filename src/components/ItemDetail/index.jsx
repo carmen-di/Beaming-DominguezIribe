@@ -33,7 +33,6 @@ const ItemDetail = ({product}) => {
     removeItem(product)
   }
   
-  console.log(qty)
 
   return (
     <div>

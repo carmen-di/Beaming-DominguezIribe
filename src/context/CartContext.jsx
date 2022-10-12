@@ -45,8 +45,14 @@ const CartContext = ({children}) => {
         return total;
     }
 
+    const totalProducts = cart.reduce(
+        (acc, products) => (acc += products.quantity),
+        0,
+      );
+    
+
     return (
-        <Shop.Provider value= {{cart, addItem, removeItem, clearCart, total}}>
+        <Shop.Provider value= {{cart, addItem, removeItem, clearCart, total, totalProducts}}>
             {children}
         </Shop.Provider>
     )

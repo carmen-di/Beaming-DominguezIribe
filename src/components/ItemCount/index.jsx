@@ -32,7 +32,6 @@ const ItemCount = ({stock, initial, onAdd}) => {
   const stockdispo = stock - count
 
   useEffect(()=> {
-    console.log("Se montó el estado");
   }, [])
 
   useEffect(() => {

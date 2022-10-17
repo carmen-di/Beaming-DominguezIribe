@@ -17,7 +17,7 @@ const Form = () => {
     
     const nav = useNavigate();
 
-    const [loading] = useState();
+    const [loading, setLoading] = useState(false);
 
     const [data, setData] = useState({
         nombre: '',
@@ -41,7 +41,7 @@ const Form = () => {
             data.email,
             data.telefono,
             cart,
-            total
+            precioTotal
         );
 
         const docRef = await addDoc(collection(db, "orders"), orden);
@@ -58,14 +58,14 @@ const Form = () => {
         });
         setData({});
         clearCart();
+        setLoading(false);
         Swal.fire(
             'Gracias por su compra! ',
-            `Número de pedido: ${docRef.id}`
+            `Número de pedido: ${docRef.id}`,
+            'success'
         ) 
         nav(`/`);
     }
-
-    
 
     return ( 
         <>
@@ -73,25 +73,25 @@ const Form = () => {
             <Loader/>
             :
             <div className='formulario'>
-                <h2>Datos de contacto</h2>
+                <h3>Datos de contacto</h3>
                 <form  onSubmit= {handleSubmit}>
-                    <div>
-                        <label>Nombre</label>
-                        <input className='formImput' type="text" placeholder='Nombre' name='nombre'  onChange={saveData} required/>
+                    <div className="mb-3">
+                        <label htmlFor="nombre" className="form-label">Nombre</label>
+                        <input className='formImput' type="text" name='nombre'  onChange={saveData} required/>
                     </div>
-                    <div>
-                        <label>Apellido</label>
-                        <input className='formImput' type="text" placeholder='Apellido' name='apellido' onChange={saveData} required/>
+                    <div className="mb-3">
+                        <label htmlFor="nombre" className="form-label">Apellido</label>
+                        <input className='formImput' type="text" name='apellido' onChange={saveData} required/>
                     </div>
-                    <div>
-                        <label>Email</label>
-                        <input className='formImput' type="email" placeholder='Direccion E-mail' name='email' onChange={saveData} required/>
+                    <div className="mb-3">
+                        <label htmlFor="nombre" className="form-label">Email</label>
+                        <input className='formImput' type="email" name='email' onChange={saveData} required/>
                     </div>
-                    <div>
-                        <label>Teléfono</label>
-                        <input className='formImput' type="number" placeholder='Telefono' name='telefono' onChange={saveData} required/>
+                    <div className="mb-3">
+                        <label htmlFor="nombre" className="form-label">Teléfono</label>
+                        <input className='formImput' type="number" name='telefono' onChange={saveData} required/>
                     </div>
-                    <button>Finalizar compra</button>
+                    <Button type='submit' variant="outline-dark">Finalizar compra</Button>
                 </form>
             </div>
             

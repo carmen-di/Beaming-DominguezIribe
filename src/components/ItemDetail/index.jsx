@@ -13,7 +13,7 @@ const ItemDetail = ({product}) => {
   const [qty, setQty] = useState(0);
   const navigate = useNavigate();
   
-  const {addItem, removeItem, clearCart} = useContext(Shop);
+  const {addItem} = useContext(Shop);
 
   const addCart = (quantity) => {
     setQty(quantity);
@@ -25,20 +25,11 @@ const ItemDetail = ({product}) => {
     navigate("/cart")
   }
 
-  const limpiarCarrito = () => {
-    clearCart()
-  }
-
-  const eliminarItem = () =>{
-    removeItem(product)
-  }
-  
-
   return (
     <div>
         <h1>{product.title}</h1>
         <div className='DetailContenedor'> 
-          <img src= {product.image} alt="producto detalle" width={400}/>
+          <img src= {product.image} alt="producto detalle" width={300}/>
           <div className='DataDescripcion'>
             <p>{product.description}</p>
             <p>${product.price}</p>

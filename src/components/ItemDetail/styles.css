@@ -1,5 +1,5 @@
 h1{
-    height: 28vh;
+    height: 24vh;
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -16,13 +16,19 @@ h1{
     margin: 0px auto;
 }
 
+.DetailContenedor img {
+    padding-bottom: 28vh;
+}
+
 .DataDescripcion{
     display: flex;
     flex-direction: column;
+    padding-bottom: 28vh;
 }
 
 .DataDescripcion p{
     width: 40vh;
+    margin-bottom: 8px;
 }
 
 .DataDescripcion button{

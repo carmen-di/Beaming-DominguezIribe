@@ -10,14 +10,16 @@ const Item = ({productMostrar}) => {
   }
 
   return ( 
-    <Card style={{ width: '18rem' }} onClick={handleNavigate}>
-      <Card.Img className='imagen' variant="top" src= {productMostrar.image} width= {250} height={300}/>
-      <Card.Body>
-        <Card.Title className='title'>{productMostrar.title}</Card.Title>
-        <Card.Text className='price'>${productMostrar.price}</Card.Text>
-        <Card.Text className='description'>{productMostrar.description}</Card.Text>
-      </Card.Body>
-    </Card>
+    <div className='contenedorCards'>
+      <Card className='card' style={{ width: '18rem' }} onClick={handleNavigate}>
+        <Card.Img className='imagen' variant="top" src= {productMostrar.image} width= {250} height={300}/>
+        <Card.Body>
+          <Card.Title className='title'>{productMostrar.title}</Card.Title>
+          <Card.Text className='price'>${productMostrar.price}</Card.Text>
+          <Card.Text className='description'>{productMostrar.description}</Card.Text>
+        </Card.Body>
+      </Card>
+    </div>
   )
 }
 

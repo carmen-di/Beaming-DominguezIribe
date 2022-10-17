@@ -1,3 +1,15 @@
+.contenedorCards {
+    padding-top: 25px;
+}
+
+.contenedorCards :hover{
+    background-color: #f5eded;
+}
+
+.card {
+    border-color: white;
+}
+
 .title{
     text-align: center;
 }

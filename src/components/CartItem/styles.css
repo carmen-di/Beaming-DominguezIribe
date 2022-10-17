@@ -50,10 +50,17 @@ table{
 }
 
 .btnConfirm{
-    margin-top: 10px;
-    font-weight: 700;
+    position: absolute;
+    left: 49%;
+    font-weight: 600;
 }
 
 .btnConfirm :hover{
     color: #635858;
+}
+
+.btnVaciar {
+    position: absolute;
+    font-weight: 500;
+    left: 37%;
 }

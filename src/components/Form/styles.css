@@ -1,14 +1,25 @@
 .formulario {
-    width: 400px;
-    /* background-color: #635858; */
-    padding: 25px 30px;
-    border-radius: 4px;
+  width: 400px;
+  background: #f5eded;
+  padding: 30px;
+  margin: auto;
+  margin-top: 75px;
+  border-radius: 4px;
+  color: black;
+}
+
+label {
+    font-size: 18px;
+    font-weight: 400;
 }
 
 .formImput {
-    width: 100%;
-    margin-bottom: 16px;
-    border: 1px solid #635858;
-    border-radius: 4px;
-    font-size: 18px;
+  width: 100%;
+  background: #f5eded;
+  padding: 5px;
+  border-radius: 4px;
+  margin-bottom: 16px;
+  border: 1px solid black;
+  font-size: 16px;
+  color: black;
 }
